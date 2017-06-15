@@ -7,12 +7,13 @@
 $(document).ready(function() {
 
 	var topics = ['Guitar','Drums','Piano','Crow','Wilting','Distortion','Vortex','Uncertain'];
-
+	
 	fillButtonBox();
 
 	function fillButtonBox() {
 		// Fills buttonsbox with buttons classed 'ボタン'
 		var boxx = $('#buttonsbox');
+		
 		for (var i = 0; i < topics.length; i++) {
 			boxx.append($("<button class='botan'>" + topics[i] + "</h1>"))
 		}
@@ -38,8 +39,10 @@ $(document).ready(function() {
 
 			function populate() {
 				for (var i = 0; i < 10; i++) {
+					var goxx = $('#gifsbox');
 					var materials = response.data[i].images.fixed_height_small.url;
 					console.log(materials);
+					goxx.prepend($("<img src=" + materials + ">" + "</img>"))
 				}
 			}
 
