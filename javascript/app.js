@@ -6,7 +6,7 @@
 
 $(document).ready(function() {
 
-	var topics = ['Guitar','Drums','Piano','Crow','Wilting','Distortion','Vortex','Uncertain'];
+	var topics = ['Guitar','Drums','Piano','Crow','Wilting','Distortion','Vortex','Uncertain','Bgirl','Bboy'];
 	
 	fillButtonBox();
 
@@ -24,8 +24,8 @@ $(document).ready(function() {
 
 		var apiKey = 'dc6zaTOxFJmzC';
 		// Selects text of button chosen
-		var choice = $(this).text();
-		var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + choice + "&api_key=" + apiKey;
+		var choice = $(this).text().toLowerCase();
+		var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + choice + "&rating=g&api_key=" + apiKey;
 
 
 
@@ -35,6 +35,8 @@ $(document).ready(function() {
 		}).done(function(response) {
 			// create img tag in #gifsbox
 			// Prepend 
+
+			$('#gifsbox').empty();
 			populate();
 
 			function populate() {
