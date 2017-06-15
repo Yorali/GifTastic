@@ -13,11 +13,11 @@ $(document).ready(function() {
 	function fillButtonBox() {
 		var boxx = $('#buttonsbox');
 		for (var i = 0; i < topics.length; i++) {
-			boxx.prepend($("<button class='botan'>" + topics[i] + "</h1>"))
+			boxx.append($("<button class='botan'>" + topics[i] + "</h1>"))
 		}
 	};
 
-	$("#guitar-button").on("click", function() {
+	$("div button").on("click", function() {
 
 
 		var apiKey = 'dc6zaTOxFJmzC';
