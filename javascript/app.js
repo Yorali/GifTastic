@@ -42,17 +42,33 @@ $(document).ready(function() {
 			function populate() {
 				for (var i = 0; i < 10; i++) {
 					var goxx = $('#gifsbox');
-					var materials = response.data[i].images.fixed_height_small.url;
-					console.log(materials);
-					goxx.prepend($("<img src=" + materials + ">" + "</img>"))
+					var materials = response.data[i].images.fixed_height.url;
+					var stillMaterials = response.data[i].images.fixed_height_still.url;
+					goxx.prepend($("<img class='gifs' src=" + stillMaterials + " data-still=" + stillMaterials + " data-animate=" + materials + " data-state='still'>" + "</img></br>"))
 				}
-			}
+			};
 
 			var imageUrl = response.data[1].url;
 			console.log(imageUrl);
+
+			$(".gifs").on('click', function() {
+				var state = $(this).attr('data-state');
+				if (state === 'still') {
+					$(this).attr('src', $(this).attr('data-animate'));
+					$(this).attr('data-state', 'animate');
+				}
+				else {
+					$(this).attr('src', $(this).attr('data-still'));
+					$(this).attr('data-state', 'still');
+				}
+			});
+
+
 		});
 
+			
 	});
+
 
 });
 
