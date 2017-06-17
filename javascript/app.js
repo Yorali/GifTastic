@@ -6,7 +6,10 @@
 
 $(document).ready(function() {
 
-	var topics = ['Guitar','Drums','Piano','Crow','Wilting','Distortion','Vortex','Uncertain','Bgirl','Bboy'];
+	var music = $('#sin');
+	sin.play();
+
+	var topics = ['Guitar','Drums','Piano','Crow','Wilt','Distortion','Vortex','Uncertain','Bgirl','Bboy','Pain', 'Physics', 'Mathematics', 'Distress', 'The Gazette'];
 	
 	fillButtonBox();
 

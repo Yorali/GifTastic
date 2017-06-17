@@ -1,0 +1,42 @@
+* {
+	box-sizing: border-box;
+}
+
+.title. {
+
+}
+
+body {
+	width: 90%;
+	background: url(images/vandalism.jpg) no-repeat center center fixed;
+	-webkit-background-size: 100% auto;
+	-moz-background-size: 100% auto;
+	-ms-background-size: 100% auto;
+	-o-background-size: 100% auto;
+	background-size: 100% auto;
+}
+
+.wrapper {
+	text-align: center;
+	width: 90%;
+	height: ;
+	margin: 0 auto;
+}
+
+.title {
+	font-size:36px;
+}
+
+.instructions {
+	padding: 15px;
+}
+
+.botan {
+	padding: 5px;
+	border: 1px solid grey;
+}
+
+.gifs {
+	margin: 15px;
+}
+
